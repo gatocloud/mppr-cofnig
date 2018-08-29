@@ -17,6 +17,12 @@ eureka:
 
 server:
   port: 9101
+  
+turbine:
+  appConfig: mppr-message-service
+  aggregator:
+    clusterConfig: default
+  clusterNameExpression: new String("default")
 
 sms:
  uid: username
