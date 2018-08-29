@@ -19,7 +19,7 @@ server:
 
 
 key:
-  hello
+  githubmsg
 
 mybatis:
   typeAliasesPackage: com.gato.yun.mppr.module.service.entity
