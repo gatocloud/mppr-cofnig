@@ -1,0 +1,40 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://sh-cdb-ljjztg90.sql.tencentcdb.com:63054/gato_db
+    username: root
+    password: caoyang821821821
+
+
+eureka:
+  client:
+    service-url:
+       defaultZone: http://localhost:8761/eureka
+  instance:
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+    prefer-ip-address: true
+    status-page-url: http://${spring.cloud.client.ipAddress}:${server.port}/swagger-ui.html
+
+server:
+  port: 9220
+
+mybatis:
+  typeAliasesPackage: com.gato.yun.mppr.door.service.entity
+  mapperLocations: classpath:mapper/*.xml
+  configuration:
+    cacheEnabled: true
+    useGeneratedKeys: true
+    defaultExecutorType: reuse
+    mapUnderscoreToCamelCase: true
+
+management:
+  security:
+    enabled: false
+
+eureka.client.healthcheck.enabled: false
+
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
