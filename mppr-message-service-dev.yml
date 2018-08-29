@@ -18,6 +18,10 @@ eureka:
 server:
   port: 9101
   
+feign:
+  hystrix:
+    enabled: true
+  
 turbine:
   appConfig: mppr-message-service
   aggregator:
