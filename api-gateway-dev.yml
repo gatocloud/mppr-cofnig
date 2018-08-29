@@ -1,0 +1,25 @@
+server:
+  port: 9980
+
+eureka:
+  client:
+    service-url:
+       defaultZone: http://localhost:8761/eureka
+
+zuul:
+  routes:
+    user-center-service:
+      path: /n/login/**
+      serviceId: user-center-service
+    role-service:
+      path: /v1/role/**
+      serviceId: role-service
+
+spring:
+  application:
+    name: api-gateway
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://sh-cdb-ljjztg90.sql.tencentcdb.com:63054/gato_db
+    username: root
+    password: caoyang821821821
