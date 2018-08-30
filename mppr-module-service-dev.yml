@@ -1,52 +1,25 @@
-current.application.name: mppr-module-service
-current.application.port: 9109
-
-#dev.eureka.zone: http://140.143.96.122:8761/eureka
-dev.eureka.zone: http://localhost/eureka
-
-configserver.id: CONFIG-SERVER
-
 spring:
-  cloud:
-    config:
-      discovery:
-        enabled: true
-        service-id:  ${configserver.id}
-
-  profiles:
-    active: dev
-  application:
-    name: ${current.application.name}
-  
-   datasource:
+  datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://sh-cdb-ljjztg90.sql.tencentcdb.com:63054/gato_db
     username: root
     password: caoyang821821821
 
-eureka:
-  instance:
-    prefer-ip-address: true
-    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
-    appname: ${current.application.name}
 
+eureka:
   client:
     service-url:
-      defaultZone: ${dev.eureka.zone}
-
-  client.healthcheck.enabled: false
-
+       defaultZone: http://localhost:8761/eureka
+  instance:
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+    prefer-ip-address: true
 
 server:
-  port: ${current.application.port}
-  tomcat.uri-encoding: UTF-8
+  port: 9002
 
-
-key:
-  githubmsgtttt
 
 mybatis:
-  typeAliasesPackage: com.gato.yun.mppr.module.service.entity
+  typeAliasesPackage: com.gato.yun.module.service.entity
   mapperLocations: classpath:mapper/*.xml
   configuration:
     cacheEnabled: true
@@ -54,14 +27,19 @@ mybatis:
     defaultExecutorType: reuse
     mapUnderscoreToCamelCase: true
 
+
+
 management:
   security:
     enabled: false
+
+eureka.client.healthcheck.enabled: false
 
 pagehelper:
   helperDialect: mysql
   reasonable: true
   supportMethodsArguments: true
   params: count=countSql
+
 
 
