@@ -36,8 +36,8 @@ sms:
 mail:
   host: smtp.qq.com
   port: 587
-  username: wangsh@gato.com.cn
-  password: Asd@123
+  username: 1621023101@qq.com
+  password: bjtlstxsgatndaad
   
 
 mybatis:
