@@ -19,7 +19,7 @@ server:
 
 
 mybatis:
-  typeAliasesPackage: com.gato.yun.module.service.entity
+  typeAliasesPackage: com.gato.yun.mppr.module.service.entity
   mapperLocations: classpath:mapper/*.xml
   configuration:
     cacheEnabled: true
