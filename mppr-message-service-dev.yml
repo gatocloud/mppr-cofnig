@@ -32,6 +32,13 @@ sms:
  uid: username
  key: key
  url: http://gbk.api.smschinese.cn
+ 
+mail：
+  host：smtp.qq.com
+  port：587
+  username：wangsh@gato.com.cn
+  password：Asd@123
+  
 
 mybatis:
   typeAliasesPackage: com.gato.yun.message.service.entity
