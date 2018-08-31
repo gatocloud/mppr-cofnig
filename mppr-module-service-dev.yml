@@ -21,7 +21,7 @@ spring:
 #    prefer-ip-address: true
 
 server:
-  port: 9002
+  port: 9004
 
 
 mybatis:
