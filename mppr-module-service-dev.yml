@@ -39,7 +39,7 @@ management:
     enabled: false
 
 key:
-  ttt changed keys
+  uuuu changed keys
 
 # eureka.client.healthcheck.enabled: false
 
