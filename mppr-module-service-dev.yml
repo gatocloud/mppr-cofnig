@@ -33,7 +33,8 @@ mybatis:
     defaultExecutorType: reuse
     mapUnderscoreToCamelCase: true
 
-
+key:
+  ssss
 
 management:
   security:
