@@ -4,6 +4,11 @@ spring:
     url: jdbc:mysql://sh-cdb-ljjztg90.sql.tencentcdb.com:63054/gato_db
     username: root
     password: caoyang821821821
+  rabbitmq:
+    port: 5672
+    host: 192.168.8.107
+    username: admin
+    password: 123456
 
 
 eureka:
