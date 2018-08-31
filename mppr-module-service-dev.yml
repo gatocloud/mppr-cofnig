@@ -37,10 +37,6 @@ mybatis:
     mapUnderscoreToCamelCase: true
 
 
-management:
-  security:
-    enabled: false
-
 key:
   666677777 changed keys
 
