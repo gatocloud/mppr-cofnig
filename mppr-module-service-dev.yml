@@ -38,6 +38,9 @@ management:
   security:
     enabled: false
 
+key:
+  hello
+
 # eureka.client.healthcheck.enabled: false
 
 pagehelper:
