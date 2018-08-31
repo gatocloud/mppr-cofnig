@@ -39,7 +39,7 @@ management:
     enabled: false
 
 key:
-  hello
+  update success
 
 # eureka.client.healthcheck.enabled: false
 
