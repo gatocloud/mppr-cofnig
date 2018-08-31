@@ -23,6 +23,9 @@ spring:
 server:
   port: 9004
 
+management:
+  security:
+    enabled: false
 
 mybatis:
   typeAliasesPackage: com.gato.yun.mppr.module.service.entity
