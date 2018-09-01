@@ -9,8 +9,17 @@ spring:
     port: 5672
     host: 140.143.96.122
     username: admin
-    password: 123456 
-
+    password: 123456
+    
+  redis:
+        host: 140.143.96.122
+        port: 6379
+        password:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+          max-wait: 10000
 
 #  eureka:
  #   client:
