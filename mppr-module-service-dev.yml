@@ -40,7 +40,7 @@ mybatis:
 key:
   1111
 
-# eureka.client.healthcheck.enabled: false
+eureka.client.healthcheck.enabled: false
 
 pagehelper:
   helperDialect: mysql
