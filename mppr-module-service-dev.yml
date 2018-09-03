@@ -48,7 +48,7 @@ mybatis:
 
 
 key:
-  fffff
+  sssss
 
 eureka.client.healthcheck.enabled: false
 
