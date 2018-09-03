@@ -39,7 +39,7 @@ sms:
  url: http://gbk.api.smschinese.cn
 
 mybatis:
-  typeAliasesPackage: com.gato.yun.linkage.service.entity
+  typeAliasesPackage: com.gato.yun.mppr.linkage.service.entity
   mapperLocations: classpath:mapper/*.xml
   configuration:
     cacheEnabled: true
