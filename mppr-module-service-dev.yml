@@ -12,7 +12,7 @@ spring:
     password: 123456 
   
   redis:
-        host: 140.143.96.122
+        host: 192.168.8.107
         port: 6379
         password:
         pool:
