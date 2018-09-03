@@ -48,7 +48,7 @@ mybatis:
 
 
 key:
-  通天塔
+  电饭锅
 
 eureka.client.healthcheck.enabled: false
 
