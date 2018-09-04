@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://sh-cdb-ljjztg90.sql.tencentcdb.com:63054/gato_db
+    url: jdbc:mysql://192.168.8.192:3306/tlc_linkage
     username: root
-    password: caoyang821821821
+    password: 123456
 
   rabbitmq:
     port: 5672
