@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.8.107:3306/tlc_linkage?useSSL=false
+    url: jdbc:mysql://192.168.8.107:3306/mppr_linkage?useSSL=false
     username: root
     password: 123456
 
