@@ -53,9 +53,11 @@ management:
 
 eureka.client.healthcheck.enabled: false
 
+# 分页配置
 pagehelper:
-  helperDialect: mysql
+  helper-dialect: mysql
   reasonable: true
-  supportMethodsArguments: true
+  support-methods-arguments: true
   params: count=countSql
+
 
