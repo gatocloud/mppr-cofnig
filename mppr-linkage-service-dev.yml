@@ -4,6 +4,10 @@ spring:
     url: jdbc:mysql://192.168.8.107:3306/mppr_linkage?useSSL=false
     username: root
     password: 123456
+  context:
+   listener:
+     classes: com.gato.yun.mppr.linkage.service.listener.WebSocketListener
+
 
   rabbitmq:
     port: 5672
@@ -38,10 +42,6 @@ sms:
  key: key
  url: http://gbk.api.smschinese.cn
  
- context:
-   listener:
-     classes: com.gato.yun.mppr.linkage.service.listener.WebSocketListener
-
 mybatis:
   typeAliasesPackage: com.gato.yun.mppr.linkage.service.entity
   mapperLocations: classpath:mapper/*.xml
