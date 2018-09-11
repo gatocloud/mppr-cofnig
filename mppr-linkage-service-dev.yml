@@ -38,9 +38,9 @@ sms:
  key: key
  url: http://gbk.api.smschinese.cn
  
-context:
-  listener:
-    classes: com.gato.yun.mppr.linkage.service.listener.WebSocketListener
+#context:
+#  listener:
+#    classes: com.gato.yun.mppr.linkage.service.listener.WebSocketListener
  
 mybatis:
   typeAliasesPackage: com.gato.yun.mppr.linkage.service.entity
