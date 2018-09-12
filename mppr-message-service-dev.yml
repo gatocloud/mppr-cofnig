@@ -6,7 +6,7 @@ spring:
     password: caoyang821821821
   rabbitmq:
     port: 5672
-    host: 192.168.8.107
+    host: 192.168.9.170
     username: admin
     password: 123456
 
