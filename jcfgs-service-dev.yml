@@ -1,0 +1,51 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.9.170:3306/jcfgs?useSSL=false
+    username: root
+    password: 123456
+   
+  rabbitmq:
+    port: 5672
+    host: 192.168.9.170
+    username: admin
+    password: 123456 
+  
+  redis:
+        host: 192.168.9.170
+        port: 6379
+        password:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+          max-wait: 10000  
+
+
+server:
+  port: 9000
+
+management:
+  security:
+    enabled: false
+
+mybatis:
+  typeAliasesPackage: com.gato.yun.mppr.face.service.entity
+  mapperLocations: classpath:mapper/*.xml
+  configuration:
+    cacheEnabled: true
+    useGeneratedKeys: true
+    defaultExecutorType: reuse
+    mapUnderscoreToCamelCase: true
+
+
+key:
+  99999
+
+eureka.client.healthcheck.enabled: false
+
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
