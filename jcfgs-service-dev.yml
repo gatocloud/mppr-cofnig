@@ -30,7 +30,7 @@ management:
     enabled: false
 
 mybatis:
-  typeAliasesPackage: com.gato.yun.mppr.face.service.entity
+  typeAliasesPackage: com.gato.yun.mppr.jcfgs.service.entity
   mapperLocations: classpath:mapper/*.xml
   configuration:
     cacheEnabled: true
