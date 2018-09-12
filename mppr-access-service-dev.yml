@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.8.107:3306/mppr_access
+    url: jdbc:mysql://192.168.9.170:3306/mppr_access
     username: root
     password: 123456
 
