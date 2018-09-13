@@ -37,4 +37,9 @@ mybatis:
     useGeneratedKeys: true
     defaultExecutorType: reuse
     mapUnderscoreToCamelCase: true
-
+#日志配置
+logback:
+  logdir: /datalog/jcfgs
+  appname: cfgs-log
+logging:
+  config: classpath:logback-spring-dev.xml
