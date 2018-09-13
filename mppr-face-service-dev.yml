@@ -4,6 +4,15 @@ spring:
     url: jdbc:mysql://192.168.9.170:3306/mppr_face?useSSL=false
     username: root
     password: 123456
+    initialSize: 1
+    maxActive: 5
+    minIdle: 1
+    maxWait: 60000
+    filters: stat,log4j,wall
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 'x'
+    testWhileIdle: true
    
   rabbitmq:
     port: 5672
@@ -41,6 +50,17 @@ mybatis:
 
 key:
   99999
+
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+
 
 eureka.client.healthcheck.enabled: false
 
