@@ -1,37 +1,40 @@
-feign:
-  httpclient:
-    enabled: true
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.9.170:3306/jcfgs?useSSL=false
+    username: root
+    password: 123456
+   
+  rabbitmq:
+    port: 5672
+    host: 192.168.9.170
+    username: admin
+    password: 123456 
+  
+  redis:
+        host: 192.168.9.170
+        port: 6379
+        password:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+          max-wait: 10000  
 
 
-
-#端口号
 server:
   port: 9300
 
-spring:
-  #数据库设置
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.9.170:3306/jcfgs?serverTimezone=UTC
-    username: root
-    password: 123456
-  #redis设置
-  redis:
-      host: 192.168.9.170
-      port: 6379
-      database: 0
+management:
+  security:
+    enabled: false
 
-
-#开启熔断器
-feign:
-  hystrix:
-    enabled: true
-
-#mybatis配置
 mybatis:
   typeAliasesPackage: com.gato.yun.mppr.jcfgs.service.entity
   mapperLocations: classpath:mapper/*.xml
   configuration:
     cacheEnabled: true
+    useGeneratedKeys: true
     defaultExecutorType: reuse
     mapUnderscoreToCamelCase: true
+
