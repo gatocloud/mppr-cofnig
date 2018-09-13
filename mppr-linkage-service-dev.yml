@@ -45,7 +45,6 @@ sms:
 
  
 mybatis:
-  typeAliasesPackage: com.gato.yun.mppr.linkage.service.entity
   mapperLocations: classpath:mapper/*.xml
   configuration:
     cacheEnabled: true
