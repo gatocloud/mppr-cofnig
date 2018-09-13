@@ -4,6 +4,21 @@ spring:
     url: jdbc:mysql://192.168.9.170:3306/mppr_vehicle
     username: root
     password: 123456
+  rabbitmq:
+    port: 5672
+    host: 192.168.9.170
+    username: admin
+    password: 123456
+
+  mqtt:
+    username: username  #MQTT-用户名
+    password: password #MQTT-密码
+    url: tcp://192.168.9.169:1883 #MQTT-服务器连接地址，如果有多个，用逗号隔开，如：tcp://127.0.0.1:61613，tcp://192.168.2.133:61613
+    client:
+      id: mqttId  #MQTT-连接服务器默认客户端ID
+    default:
+      topic: /v1.0/notification/+/alarm/+ #MQTT-默认的消息推送主题，实际可在调用接口时指定
+    completionTimeout: 3000 #连接超时
 
 server:
   port: 9230
