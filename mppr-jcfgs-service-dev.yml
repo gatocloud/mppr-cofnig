@@ -43,3 +43,7 @@ logback:
   appname: cfgs-log
 logging:
   config: classpath:logback-spring-dev.xml
+  
+  
+#远程调用c++
+remoteUrl: http://192.168.8.67:9300 
