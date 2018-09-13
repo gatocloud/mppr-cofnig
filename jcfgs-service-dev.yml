@@ -1,51 +1,55 @@
-spring:
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.9.170:3306/jcfgs?useSSL=false
-    username: root
-    password: 123456
-   
-  rabbitmq:
-    port: 5672
-    host: 192.168.9.170
-    username: admin
-    password: 123456 
-  
-  redis:
-        host: 192.168.9.170
-        port: 6379
-        password:
-        pool:
-          max-active: 8
-          max-idle: 8
-          min-idle: 0
-          max-wait: 10000  
+feign:
+  httpclient:
+    enabled: true
 
+#日志配置
+logback:
+  logdir: /datalog/jcfgs
+  appname: cfgs-log
+logging:
+  config: classpath:logback-spring-dev.xml
 
+#端口号
 server:
   port: 9300
 
-management:
-  security:
-    enabled: false
+spring:
+  #数据库设置
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.9.170:3306/jcfgs?serverTimezone=UTC
+    username: root
+    password: 123456
+  #服务名称
+  application:
+    name: jcfgs-service
+  #redis设置
+  redis:
+      host: 192.168.9.170
+      port: 6379
+      database: 0
 
+
+#向注册中心注册注册中心
+eureka:
+  client:
+    service-url:
+       defaultZone: http://127.0.0.1:8761/eureka
+
+#开启熔断器
+feign:
+  hystrix:
+    enabled: true
+
+#mybatis配置
 mybatis:
   typeAliasesPackage: com.gato.yun.mppr.jcfgs.service.entity
   mapperLocations: classpath:mapper/*.xml
   configuration:
     cacheEnabled: true
-    useGeneratedKeys: true
     defaultExecutorType: reuse
     mapUnderscoreToCamelCase: true
 
 
-key:
-  99999
-
-eureka.client.healthcheck.enabled: false
-
-pagehelper:
-  helperDialect: mysql
-  reasonable: true
-  supportMethodsArguments: true
-  params: count=countSql
+#远程调用c++
+remoteUrl: http://192.168.8.67:9300
