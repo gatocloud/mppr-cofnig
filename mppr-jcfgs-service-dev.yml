@@ -2,12 +2,7 @@ feign:
   httpclient:
     enabled: true
 
-#日志配置
-logback:
-  logdir: /datalog/jcfgs
-  appname: cfgs-log
-logging:
-  config: classpath:logback-spring-dev.xml
+
 
 #端口号
 server:
@@ -40,7 +35,3 @@ mybatis:
     cacheEnabled: true
     defaultExecutorType: reuse
     mapUnderscoreToCamelCase: true
-
-
-#远程调用c++
-remoteUrl: http://192.168.8.67:9300
