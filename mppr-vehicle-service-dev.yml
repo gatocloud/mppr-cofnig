@@ -31,6 +31,9 @@ mybatis:
     useGeneratedKeys: true
     defaultExecutorType: reuse
     mapUnderscoreToCamelCase: true
+logging:
+  level:
+    com.gato.yun.mppr.vehicle.service.dao : debug
 
 management:
   security:
