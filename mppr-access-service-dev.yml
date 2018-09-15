@@ -33,6 +33,10 @@ eureka:
 server:
   port: 9210
 
+logging:
+  level:
+    com.gato.yun.mppr.access.service.dao : debug
+
 mybatis:
   typeAliasesPackage: com.gato.yun.mppr.access.service.entity
   mapperLocations: classpath:mapper/*.xml
