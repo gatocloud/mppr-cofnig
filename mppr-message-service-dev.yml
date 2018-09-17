@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.9.170:3306/mppr-linkage?useSSL=false
+    url: jdbc:mysql://192.168.9.170:3306/mppr_linkage?useSSL=false
     username: root
     password: 123456
   rabbitmq:
