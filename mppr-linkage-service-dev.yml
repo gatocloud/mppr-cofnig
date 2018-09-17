@@ -51,6 +51,10 @@ mybatis:
     useGeneratedKeys: true
     defaultExecutorType: reuse
     mapUnderscoreToCamelCase: true
+    
+logging:
+  level:
+    com.gato.yun.mppr.linkage.service.dao: debug
 
 management:
   security:
