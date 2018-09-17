@@ -14,6 +14,9 @@ zuul:
     role-service:
       path: /v1/role/**
       serviceId: role-service
+    mppr-vehicle-service:
+      path: /v1/vehicle/**
+      serviceId: mppr-vehicle-service
 
 spring:
   application:
