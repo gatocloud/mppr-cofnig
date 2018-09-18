@@ -13,6 +13,15 @@ spring:
 server:
   port: 9101
   
+  
+hystrix:
+  command:
+    default:
+      executio:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+  
 feign:
   hystrix:
     enabled: true
