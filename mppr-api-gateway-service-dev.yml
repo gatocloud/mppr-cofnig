@@ -1,5 +1,11 @@
 spring:
-   
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.9.170:3306/mppr_face?useSSL=false
+    username: root
+    password: 123456
+  
+  
   rabbitmq:
     port: 5672
     host: 140.143.96.122
