@@ -21,15 +21,6 @@ spring:
       topic: /v1.0/notification/event/+ #MQTT-默认的消息推送主题，实际可在调用接口时指定
     completionTimeout: 3000 #连接超时
 
-eureka:
-  client:
-    service-url:
-       defaultZone: http://localhost:8761/eureka
-  instance:
-    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
-    prefer-ip-address: true
-    status-page-url: http://${spring.cloud.client.ipAddress}:${server.port}/swagger-ui.html
-
 server:
   port: 9210
 
