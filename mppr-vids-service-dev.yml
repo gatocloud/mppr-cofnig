@@ -21,8 +21,11 @@ spring:
       maxOpenPreparedStatements: 20
       logSlowSql: true
   rstp:
-    host: 192.168.9.137
-    port: 20001
+    httphost: 192.168.9.137
+    httpPort: 20001
+    rstpHost: 192.168.9.137
+    rstpPort: 20003
+
   rabbitmq:
     virtual-host: /
     password: 123456
