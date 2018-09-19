@@ -1,34 +1,57 @@
-server:
-  port: 9980
-
-eureka:
-  client:
-    service-url:
-       defaultZone: http://localhost:8761/eureka
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.9.170:3306/mppr_face?useSSL=false
+    username: root
+    password: 123456
+   
+  rabbitmq:
+    port: 5672
+    host: 140.143.96.122
+    username: admin
+    password: 123456 
+  
+  redis:
+        host: 192.168.9.170
+        port: 6379
+        password:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+          max-wait: 10000  
 
 zuul:
+  #忽略所有敏感头
+  sensitive-headers:
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
   routes:
-    user-center-service:
-      path: /n/login/**
-      serviceId: user-center-service
-    role-service:
-      path: /v1/role/**
-      serviceId: role-service
+    account:
+      path: /jcfgs/**
+      serviceId: mppr-jcfgs-service
+      sensitiveHeaders:
     mppr-vehicle-service:
       path: /v1/vehicle/**
       serviceId: mppr-vehicle-service
+    mppr-access-service:
+      path: /v1/access/**
+      serviceId: mppr-access-service
+    mppr-linkage-service:
+      path: /v1/linkage/**
+      serviceId: mppr-linkage-service
+    mppr-message-service:
+      path: /v1/message/**
+      serviceId: mppr-message-service
+    mppr-face-service:
+      path: /v1/face/**
+      serviceId: mppr-face-service
 
-spring:
-  application:
-    name: api-gateway
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://sh-cdb-ljjztg90.sql.tencentcdb.com:63054/gato_db
-    username: root
-    password: caoyang821821821
-    
-  rabbitmq:
-    host: 140.143.96.122
-    port: 5672
-    username: admin
-    password: 123456  
+
+server:
+  port: 9200
+
+management:
+  security:
+    enabled: false
