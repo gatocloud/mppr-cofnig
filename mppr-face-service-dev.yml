@@ -21,7 +21,7 @@ spring:
           max-idle: 8
           min-idle: 0
           max-wait: 10000 
-          
+           
   mqtt:
       username: username 
       password: password
