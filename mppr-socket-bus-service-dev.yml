@@ -23,7 +23,7 @@ spring:
 
 
 server:
-  port: 9998
+  port: 9999
 
 management:
   security:
