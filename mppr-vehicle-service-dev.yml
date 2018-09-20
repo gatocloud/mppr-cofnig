@@ -9,6 +9,16 @@ spring:
     host: 192.168.9.170
     username: admin
     password: 123456
+    
+  redis:
+    host: 192.168.9.170
+    port: 6379
+    password:
+    pool:
+      max-active: 8
+      max-idle: 8
+      min-idle: 0
+      max-wait: 10000 
 
   mqtt:
     username: username  #MQTT-用户名
