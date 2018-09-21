@@ -34,16 +34,16 @@ zuul:
       serviceId: mppr-jcfgs-service
       sensitiveHeaders:
     mppr-vehicle-service:
-      path: /v1/vehicle/**
+      path: /mppr-vehicle/**
       serviceId: mppr-vehicle-service
     mppr-access-service:
-      path: /v1/access/**
+      path: /mppr-access/**
       serviceId: mppr-access-service
     mppr-linkage-service:
-      path: /v1/linkage/**
+      path: /mppr-linkage/**
       serviceId: mppr-linkage-service
     mppr-message-service:
-      path: /v1/message/**
+      path: /mppr-message/**
       serviceId: mppr-message-service
     mppr-face-service:
       path: /mppr-face/**
