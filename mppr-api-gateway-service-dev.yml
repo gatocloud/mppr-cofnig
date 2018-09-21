@@ -46,7 +46,7 @@ zuul:
       path: /v1/message/**
       serviceId: mppr-message-service
     mppr-face-service:
-      path: /v1/face/**
+      path: /mppr-face/**
       serviceId: mppr-face-service
 
 
