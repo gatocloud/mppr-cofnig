@@ -32,7 +32,7 @@ spring:
       client:
         id: faceSnapshoot  #MQTT-连接服务器默认客户端ID
       default:
-        topic: /v1.0/NOTIFY/facecapture #MQTT-默认的消息推送主题，实际可在调用接口时指定
+        topic: /v1.0/NOTIFY/facecapture/# #MQTT-默认的消息推送主题，实际可在调用接口时指定
       completionTimeout: 3000 #连接超时            
 
 server:
