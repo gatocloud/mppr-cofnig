@@ -64,9 +64,10 @@ hystrix:
 
 
 eureka.client.healthcheck.enabled: false
+#日志配置
+logback:
+  logdir: /datalog/jcfgs
+  appname: cfgs-log
+logging:
+  config: classpath:logback-spring-dev.xml
 
-pagehelper:
-  helperDialect: mysql
-  reasonable: true
-  supportMethodsArguments: true
-  params: count=countSql
