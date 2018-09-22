@@ -1,22 +1,14 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.9.170:3306/jcfgs?useSSL=false
+    url: jdbc:mysql://192.168.9.170:3306/mppr_face?useSSL=false
     username: root
     password: 123456
-    initialSize: 1
-    maxActive: 5
-    minIdle: 1
-    maxWait: 60000
-    filters: stat,log4j,wall
-    timeBetweenEvictionRunsMillis: 60000
-    minEvictableIdleTimeMillis: 300000
-    validationQuery: SELECT 'x'
-    testWhileIdle: true
+   
    
   rabbitmq:
     port: 5672
-    host: 192.168.9.170
+    host: 140.143.96.122
     username: admin
     password: 123456 
   
@@ -28,8 +20,17 @@ spring:
           max-active: 8
           max-idle: 8
           min-idle: 0
-          max-wait: 10000  
-
+          max-wait: 10000 
+           
+  mqtt:
+      username: username 
+      password: password
+      url: tcp://192.168.9.20:51884 #MQTT-服务器连接地址，如果有多个，用逗号隔开，如：tcp://127.0.0.1:61613，tcp://192.168.2.133:61613
+      client:
+        id: faceSnapshoot  #MQTT-连接服务器默认客户端ID
+      default:
+        topic: /v1.0/NOTIFY/facecapture #MQTT-默认的消息推送主题，实际可在调用接口时指定
+      completionTimeout: 3000 #连接超时            
 
 server:
   port: 9300
@@ -37,6 +38,19 @@ server:
 management:
   security:
     enabled: false
+
+mybatis:
+  typeAliasesPackage: com.gato.yun.mppr.jcfgs.service.entity
+  mapperLocations: classpath:mapper/*.xml
+  configuration:
+    cacheEnabled: true
+    useGeneratedKeys: true
+    defaultExecutorType: reuse
+    mapUnderscoreToCamelCase: true
+
+
+key:
+  99999
 
 hystrix:
   command:
@@ -48,26 +62,11 @@ hystrix:
           thread:
             timeoutInMilliseconds: 60000
 
-eureka.client.healthcheck.enabled: false    
-    
 
-mybatis:
-  typeAliasesPackage: com.gato.yun.mppr.jcfgs.service.entity
-  mapperLocations: classpath:mapper/*.xml
-  configuration:
-    cacheEnabled: true
-    useGeneratedKeys: true
-    defaultExecutorType: reuse
-    mapUnderscoreToCamelCase: true
-#日志配置
-logback:
-  logdir: /datalog/jcfgs
-  appname: cfgs-log
-logging:
-  config: classpath:logback-spring-dev.xml
-  
-#feign:
-#  httpclient:
-#    enabled: true  
-#远程调用c++
-remoteUrl: http://192.168.8.67:9300 
+eureka.client.healthcheck.enabled: false
+
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
