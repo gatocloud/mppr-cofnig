@@ -48,6 +48,9 @@ zuul:
     mppr-face-service:
       path: /mppr-face/**
       serviceId: mppr-face-service
+    mppr-vids-service:
+      path: /mppr-vids/**
+      serviceId: mppr-vids-service    
 
 
 server:
