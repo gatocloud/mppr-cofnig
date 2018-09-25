@@ -65,4 +65,3 @@ hystrix:
 
 eureka.client.healthcheck.enabled: false
 
-
