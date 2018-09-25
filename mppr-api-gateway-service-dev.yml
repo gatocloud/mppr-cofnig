@@ -62,3 +62,10 @@ server:
 management:
   security:
     enabled: false
+    
+ #日志配置
+logback:
+  logdir: /datalog/gateway
+  appname: gateway-log
+logging:
+  config: classpath:logback-spring-dev.xml
