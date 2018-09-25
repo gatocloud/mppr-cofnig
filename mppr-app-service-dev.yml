@@ -1,0 +1,40 @@
+
+spring:
+  datasource:
+      url: jdbc:mysql://192.168.9.170:3306/mppr_app?&useSSL=false
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
+      filters: stat
+      maxActive: 20
+      initialSize: 1
+      maxWait: 60000
+      minIdle: 1
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: select 'x'
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxOpenPreparedStatements: 20
+      logSlowSql: true
+  rabbitmq:
+    virtual-host: /
+    password: 123456
+    host: 5672
+    username: admin
+    addresses: 192.168.9.170
+  rstp:
+    httphost: 192.168.9.137
+    httpPort: 20001
+    rstpHost: 192.168.9.137
+    rstpPort: 20003
+server:
+  port: 8080
+
+mybatis:
+    basepackage: com.gato.yun.mppr.app.service.dao
+    xmlLocation: classpath:mapper/**/*.xml
+    mapper-locations: "classpath*:mapper/*.xml"

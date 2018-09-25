@@ -50,7 +50,10 @@ zuul:
       serviceId: mppr-face-service
     mppr-vids-service:
       path: /mppr-vids/**
-      serviceId: mppr-vids-service    
+      serviceId: mppr-vids-service
+    mppr-app-service:
+      path: /mppr-app/**
+      serviceId: mppr-app-service
 
 
 server:
