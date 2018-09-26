@@ -32,7 +32,7 @@ spring:
         channelchange: /v1.0/notification/channelchange/+
     completionTimeout: 3000 #连接超时
 server:
-  port: 9300
+  port: 93001
 
 management:
   security:
