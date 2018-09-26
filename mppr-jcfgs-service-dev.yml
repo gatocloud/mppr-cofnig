@@ -3,15 +3,12 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://192.168.9.170:3306/jcfgs?useSSL=false
     username: root
-    password: 123456
-   
-   
+    password: 123456  
   rabbitmq:
     port: 5672
     host: 140.143.96.122
     username: admin
     password: 123456 
-  
   redis:
         host: 192.168.9.170
         port: 6379
@@ -21,9 +18,19 @@ spring:
           max-idle: 8
           min-idle: 0
           max-wait: 10000 
-           
-      
-
+  #MQTT-用户名
+  mqtt:
+    username: admin  #MQTT-用户名
+    password: password #MQTT-密码
+    url: tcp://192.168.9.3:51884 #MQTT-服务器连接地址，如果有多个，用逗号隔开，如：tcp://127.0.0.1:61613，tcp://192.168.2.133:61613
+    client:
+      id: mqttId  #MQTT-连接服务器默认客户端ID
+    default:
+      topic:
+        devicechange: /v1.0/notification/devicechange/+
+        status: /v1.0/notification/status/+
+        channelchange: /v1.0/notification/channelchange/+
+    completionTimeout: 3000 #连接超时
 server:
   port: 9300
 
