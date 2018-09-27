@@ -51,6 +51,9 @@ mybatis:
     defaultExecutorType: reuse
     mapUnderscoreToCamelCase: true
 
+logging:
+  level:
+    com.gato.yun.mppr.face.service.dao : debug
 
 key:
   99999
