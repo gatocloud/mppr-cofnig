@@ -24,6 +24,9 @@ spring:
 server:
   port: 9210
 
+deviceServer:
+  address: http://192.168.9.20:55001  #C++ 客户端地址
+
 logging:
   level:
     com.gato.yun.mppr.access.service.dao : debug
