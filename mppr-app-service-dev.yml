@@ -26,7 +26,7 @@ spring:
     host: 5672
     username: admin
     addresses: 192.168.9.170
-  rstp:
+  rtsp:
     httphost: 192.168.9.183
     httpPort: 20001
     rstpHost: 192.168.9.183
