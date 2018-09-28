@@ -1,6 +1,6 @@
  #日志配置
 logback:
-  logdir: /datalog/jcfgs
+  logdir: D:/datalog/jcfgs
   appname: jcfgs-log
 logging:
   config: classpath:logback-spring-dev.xml
