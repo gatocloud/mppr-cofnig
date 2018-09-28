@@ -30,8 +30,6 @@ spring:
       topic: /v1.0/notification/event/# #MQTT-默认的消息推送主题，实际可在调用接口时指定
     completionTimeout: 3000 #连接超时
 
-eureka.client.healthcheck.enabled: false
-
 server:
   port: 9909
 
