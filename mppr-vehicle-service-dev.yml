@@ -36,7 +36,7 @@ server:
 deviceServer:
   address: http://192.168.9.20:55001  #C++ 客户端地址
   
-ossServer:
+fileServer:
   address: http://192.168.9.184:9333/submit #C++ OSS地址
 
 mybatis:
