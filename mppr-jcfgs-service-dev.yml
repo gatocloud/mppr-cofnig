@@ -63,4 +63,4 @@ hystrix:
 
 
 eureka.client.healthcheck.enabled: false
-ioturl: http://192.168.9.3:55001
+ioturl: http://192.168.9.182:55001
