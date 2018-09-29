@@ -55,6 +55,10 @@ logging:
   level:
     com.gato.yun.mppr.face.service.dao : debug
 
+feign:
+  hystrix:
+    enabled: true
+
 key:
   99999
 
