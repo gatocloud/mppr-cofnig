@@ -59,7 +59,7 @@ key:
   99999
 
 fileServer.address:
-  http://192.168.9.184:9333/submit
+   http://192.168.9.170:9333/submit
    
 hystrix:
   command:
