@@ -1,29 +1,28 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.9.170:3306/mppr-position
+    url: jdbc:mysql://192.168.9.170:3306/mppr_vehicle
     username: root
     password: 123456
-
   rabbitmq:
     port: 5672
-    host: 192.168.9.181
+    host: 192.168.9.170
     username: admin
     password: 123456
-
+    
   redis:
-    host: 192.168.9.181
+    host: 192.168.9.170
     port: 6379
     password:
     pool:
       max-active: 8
       max-idle: 8
       min-idle: 0
-      max-wait: 10000
+      max-wait: 10000 
   mqtt:
     username: username  #MQTT-用户名
     password: password #MQTT-密码
-    url: tcp://192.168.9.182:51884 #MQTT-服务器连接地址，如果有多个，用逗号隔开，如：tcp://127.0.0.1:61613，tcp://192.168.2.133:61613
+    url: tcp://192.168.9.38:51884 #MQTT-服务器连接地址，如果有多个，用逗号隔开，如：tcp://127.0.0.1:61613，tcp://192.168.2.133:61613
     client:
       id: ${spring.cloud.client.ipAddress}:mppr_position  #MQTT-连接服务器默认客户端ID
     default:
