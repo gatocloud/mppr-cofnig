@@ -58,6 +58,9 @@ logging:
 key:
   99999
 
+fileServer.address:
+  http://192.168.9.184:9333/submit
+   
 hystrix:
   command:
     default:
